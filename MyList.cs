@@ -185,14 +185,17 @@ namespace DataStructure
         }
         // ToArray
         // public T[] ToArray ();
+        // list<T>의 요소를 새 배열에 복사함
         public T[] ToArray()
         {
-
+            T[] newArr = new T[size];
+            Array.Copy(arr, 0, newArr, 0, size);
+            return newArr;
         }
         // public void Clear ();
         public void Clear()
         {
-
+            size = 0;
         }
         // insert
         public void Insert(int index, T item)
