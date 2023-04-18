@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace DataStructure
 {
@@ -136,7 +137,7 @@ namespace DataStructure
         
         // --------------------------------------
 
-        // 배열, 선형리스트 기술면접 정리
+        // 2. 배열, 선형리스트 기술면접 정리
 
         // ---------------------------------
 
@@ -183,7 +184,20 @@ namespace DataStructure
         {
 
         }
-        
+        // insert
+        public void Insert(int index, T item)
+        {
+            if(index > size)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            
+            T[] temp = new T[size + 1];
+            Array.Copy(arr, 0, temp, 0, size);
+            
+
+        }
+
 
     }
 }
